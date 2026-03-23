@@ -63,12 +63,41 @@
             background: radial-gradient(circle at 80% 20%, #FFF5EB 0%, #FFFFFF 50%);
         }
 
-        /* Melhoria para a pré-visualização: garantimos visibilidade inicial */
         .reveal { opacity: 1; transform: translateY(0); transition: all 0.8s ease-out; }
         
         @media (prefers-reduced-motion: no-preference) {
             .reveal-init { opacity: 0; transform: translateY(20px); }
             .reveal-init.active { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Testimonials Carousel Animation */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .carousel-track {
+            display: flex;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+        }
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* FAQ Accordion Styling */
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-bottom: 24px;
+            opacity: 1;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
         }
 
         .card-benefit {
@@ -95,24 +124,22 @@
             </div>
             
             <nav class="hidden lg:flex items-center gap-8">
-                <a href="https://l3sb1.doctorfoxick.com/l" class="text-sm font-bold hover:text-orange-500 transition-colors">DÉCOUVRIR</a>
+                <a href="#testimonials" class="text-sm font-bold hover:text-orange-500 transition-colors">AVIS</a>
+                <a href="#faq" class="text-sm font-bold hover:text-orange-500 transition-colors">QUESTIONS</a>
                 <a href="https://91h92.doctorramzes.com/l" class="btn-dtc px-6 py-2.5 rounded-full text-[10px] uppercase tracking-widest">
                     COMMANDER <i data-feather="shopping-cart" class="inline w-3 h-3 ml-1"></i>
                 </a>
             </nav>
 
-            <div class="lg:hidden">
-                <i data-feather="menu" class="text-gray-600"></i>
-            </div>
+            <div class="lg:hidden text-gray-600"><i data-feather="menu"></i></div>
         </div>
     </header>
 
     <main>
-        <!-- 🔥 HERO (ACIMA DA DOBRA) -->
+        <!-- 🔥 HERO -->
         <section class="hero-section overflow-hidden">
             <div class="container mx-auto px-6 md:px-12">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-                    
                     <div class="reveal reveal-init active order-2 lg:order-1">
                         <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6">
                             Reprenez le contrôle de votre <span class="text-[#FF7A00]">silhouette</span>, sans contrainte extrême
@@ -120,8 +147,6 @@
                         <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-xl">
                             Une formule complète conçue pour soutenir votre métabolisme, réduire les fringales et maintenir votre énergie au quotidien.
                         </p>
-
-                        <!-- Bullets -->
                         <div class="space-y-4 mb-10">
                             <div class="flex items-center gap-3">
                                 <div class="bg-orange-500 rounded-full p-1"><i data-feather="check" class="text-white w-3 h-3"></i></div>
@@ -136,18 +161,10 @@
                                 <p class="text-slate-700 font-bold">Soutient votre niveau d'énergie</p>
                             </div>
                         </div>
-
-                        <!-- CTA Options -->
                         <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-10">
-                            <a href="https://91h92.doctorramzes.com/l" class="btn-dtc px-10 py-5 rounded-2xl text-center flex items-center justify-center gap-2 text-lg">
-                                👉 Commander Maintenant
-                            </a>
-                            <a href="https://l3sb1.doctorfoxick.com/l" class="btn-tsl px-10 py-5 rounded-2xl text-center flex items-center justify-center gap-2 text-lg">
-                                👉 Découvrir Comment Ça Fonctionne
-                            </a>
+                            <a href="https://91h92.doctorramzes.com/l" class="btn-dtc px-10 py-5 rounded-2xl text-center flex items-center justify-center gap-2 text-lg">👉 Commander Maintenant</a>
+                            <a href="https://l3sb1.doctorfoxick.com/l" class="btn-tsl px-10 py-5 rounded-2xl text-center flex items-center justify-center gap-2 text-lg">👉 Découvrir Comment Ça Fonctionne</a>
                         </div>
-
-                        <!-- Trust -->
                         <div class="flex items-center gap-3">
                             <div class="flex text-orange-400">
                                 <i data-feather="star" class="w-4 h-4 fill-current"></i>
@@ -160,14 +177,9 @@
                             <span class="text-xs text-gray-400 border-l border-gray-200 pl-3">Plus de 12 000 utilisateurs en France</span>
                         </div>
                     </div>
-
-                    <!-- Visual -->
-                    <div class="reveal reveal-init active delay-200 order-1 lg:order-2 relative flex justify-center lg:justify-end">
-                        <div class="relative w-full max-w-[440px]">
-                            <img src="images/slimarax.png" alt="Slimarax Fat Burner" class="w-full h-auto drop-shadow-2xl" onerror="this.src='https://via.placeholder.com/440x600?text=Slimarax+Bottle';">
-                        </div>
+                    <div class="reveal reveal-init active delay-200 order-1 lg:order-2 flex justify-center lg:justify-end">
+                        <img src="images/slimarax.png" alt="Slimarax Fat Burner" class="w-full max-w-[440px] h-auto drop-shadow-2xl" onerror="this.src='https://via.placeholder.com/440x600?text=Slimarax+Bottle';">
                     </div>
-
                 </div>
             </div>
         </section>
@@ -175,28 +187,20 @@
         <!-- 🧩 BLOCO BENEFÍCIOS -->
         <section class="py-24 bg-[#F9F9F9]">
             <div class="container mx-auto px-6 max-w-6xl text-center">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-16">
-                    Pourquoi votre corps résiste… et comment reprendre le contrôle
-                </h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-16">Pourquoi votre corps résiste… et comment reprendre le contrôle</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                     <div class="card-benefit reveal reveal-init">
-                        <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-6">
-                            <i data-feather="target" class="text-orange-500"></i>
-                        </div>
+                        <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-6"><i data-feather="target" class="text-orange-500"></i></div>
                         <h3 class="text-xl font-bold mb-4">Cible les graisses</h3>
                         <p class="text-gray-500 leading-relaxed">Active naturellement les mécanismes de dépense énergétique.</p>
                     </div>
                     <div class="card-benefit reveal reveal-init">
-                        <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-6">
-                            <i data-feather="coffee" class="text-orange-500"></i>
-                        </div>
+                        <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-6"><i data-feather="coffee" class="text-orange-500"></i></div>
                         <h3 class="text-xl font-bold mb-4">Contrôle l'appétit</h3>
                         <p class="text-gray-500 leading-relaxed">Aide à réduire les envies impulsives entre les repas.</p>
                     </div>
                     <div class="card-benefit reveal reveal-init">
-                        <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-6">
-                            <i data-feather="activity" class="text-orange-500"></i>
-                        </div>
+                        <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-6"><i data-feather="activity" class="text-orange-500"></i></div>
                         <h3 class="text-xl font-bold mb-4">Énergie stable</h3>
                         <p class="text-gray-500 leading-relaxed">Soutient votre vitalité sans sensation d'épuisement.</p>
                     </div>
@@ -204,27 +208,80 @@
             </div>
         </section>
 
-        <!-- ⚡ BLOCO DIFERENCIAÇÃO -->
-        <section class="py-24 bg-white">
-            <div class="container mx-auto px-6 max-w-4xl text-center reveal reveal-init">
-                <h2 class="text-3xl font-extrabold text-slate-900 mb-8">
-                    Une approche plus intelligente du contrôle du poids
-                </h2>
-                <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                    Contrairement aux méthodes restrictives, Slimarax® agit en soutien de votre organisme.
-                </p>
-                <p class="text-lg text-gray-600 leading-relaxed font-bold">
-                    Sa combinaison d’actifs est pensée pour accompagner votre routine, sans bouleverser votre mode de vie.
-                </p>
+        <!-- ⭐ CARROUSEL DE TÉMOIGNAGES -->
+        <section id="testimonials" class="py-24 bg-white overflow-hidden">
+            <div class="container mx-auto px-6 mb-12 text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Ce que disent nos utilisateurs</h2>
+                <p class="text-gray-500">Des résultats réels basés sur une utilisation quotidienne.</p>
+            </div>
+            
+            <div class="carousel-container relative">
+                <div class="carousel-track">
+                    <!-- Les témoignages (dupliqués pour le loop infini) -->
+                    <!-- Unité 1 -->
+                    <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-8 rounded-[32px] border border-gray-100 shrink-0">
+                        <div class="flex text-orange-400 mb-4">
+                            <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic leading-relaxed">"Je ne cherchais pas un produit miracle, juste quelque chose pour m’aider à mieux contrôler mes envies. Après quelques jours, j’ai remarqué moins de grignotage et surtout plus de stabilité dans la journée. Ça m’aide vraiment à rester régulière."</p>
+                        <p class="font-bold text-slate-900">— Camille R., 34 ans</p>
+                    </div>
+                    <!-- Unité 2 -->
+                    <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-8 rounded-[32px] border border-gray-100 shrink-0">
+                        <div class="flex text-orange-400 mb-4">
+                            <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic leading-relaxed">"Ce que j’apprécie surtout, c’est l’énergie. Contrairement à d’autres produits que j’ai testés, je ne ressens pas de coup de fatigue. C’est plus progressif, plus naturel. Je me sens plus en contrôle au quotidien."</p>
+                        <p class="font-bold text-slate-900">— Julien M., 41 ans</p>
+                    </div>
+                    <!-- Unité 3 -->
+                    <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-8 rounded-[32px] border border-gray-100 shrink-0">
+                        <div class="flex text-orange-400 mb-4">
+                            <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic leading-relaxed">"J’ai souvent abandonné mes efforts à cause des fringales. Avec Slimarax, c’est la première fois que je ressens une vraie différence sur ce point. Moins de tentations, moins de frustration."</p>
+                        <p class="font-bold text-slate-900">— Élodie T., 29 ans</p>
+                    </div>
+                    <!-- Unité 4 -->
+                    <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-8 rounded-[32px] border border-gray-100 shrink-0">
+                        <div class="flex text-orange-400 mb-4">
+                            <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic leading-relaxed">"Produit simple à intégrer dans ma routine. Pas de changement brutal, mais un soutien constant. Je me sens plus légère et surtout plus disciplinée dans mes habitudes."</p>
+                        <p class="font-bold text-slate-900">— Sophie L., 38 ans</p>
+                    </div>
+                    <!-- Unité 5 -->
+                    <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-8 rounded-[32px] border border-gray-100 shrink-0">
+                        <div class="flex text-orange-400 mb-4">
+                            <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic leading-relaxed">"Je voulais quelque chose de discret mais efficace. Après quelques semaines, je remarque surtout une meilleure gestion de mon appétit et plus d’énergie pour bouger. C’est exactement ce que je cherchais."</p>
+                        <p class="font-bold text-slate-900">— Marc D., 45 ans</p>
+                    </div>
+
+                    <!-- Duplicate for infinite effect -->
+                    <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-8 rounded-[32px] border border-gray-100 shrink-0">
+                        <div class="flex text-orange-400 mb-4">
+                            <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">"Je ne cherchais pas un produit miracle, juste quelque chose pour m’aider à mieux contrôler mes envies..."</p>
+                        <p class="font-bold text-slate-900">— Camille R., 34 ans</p>
+                    </div>
+                    <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-8 rounded-[32px] border border-gray-100 shrink-0">
+                        <div class="flex text-orange-400 mb-4">
+                            <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">"Ce que j’apprécie surtout, c’est l’énergie..."</p>
+                        <p class="font-bold text-slate-900">— Julien M., 41 ans</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 🚨 BLOCO EMOCIONAL (CURTO) -->
+        <!-- 🚨 BLOCO EMOCIONAL -->
         <section class="py-24 bg-orange-500 text-white">
             <div class="container mx-auto px-6 max-w-4xl text-center reveal reveal-init">
-                <h2 class="text-3xl md:text-5xl font-black mb-8 italic">
-                    Moins de frustration. Plus de contrôle.
-                </h2>
+                <h2 class="text-3xl md:text-5xl font-black mb-8 italic">Moins de frustration. Plus de contrôle.</h2>
                 <div class="space-y-4 text-lg md:text-xl font-medium opacity-90">
                     <p>Moins de fatigue, moins de fringales, moins de lutte constante.</p>
                     <p>Juste un soutien quotidien pour vous aider à avancer, à votre rythme.</p>
@@ -232,28 +289,126 @@
             </div>
         </section>
 
+        <!-- 🧩 FAQ ACCORDION -->
+        <section id="faq" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-12 text-center">Foire aux questions</h2>
+                
+                <div class="space-y-4">
+                    <!-- Q1 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center transition-colors hover:bg-orange-50/30">
+                            <span class="font-bold text-slate-800 pr-4">Comment fonctionne Slimarax® ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8">
+                            <p class="text-gray-600 leading-relaxed">Slimarax® est une formule conçue pour soutenir le métabolisme et accompagner le contrôle du poids. Ses actifs contribuent à la dépense énergétique, à la gestion de l’appétit et au maintien de votre niveau d’énergie au quotidien.</p>
+                        </div>
+                    </div>
+                    <!-- Q2 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center transition-colors hover:bg-orange-50/30">
+                            <span class="font-bold text-slate-800 pr-4">En combien de temps peut-on ressentir les effets ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8">
+                            <p class="text-gray-600 leading-relaxed">Les ressentis varient selon les personnes. Certains utilisateurs notent rapidement une meilleure gestion des fringales et plus d’énergie, tandis que les résultats sur la silhouette s’observent progressivement avec une utilisation régulière.</p>
+                        </div>
+                    </div>
+                    <!-- Q3 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center transition-colors hover:bg-orange-50/30">
+                            <span class="font-bold text-slate-800 pr-4">Faut-il suivre un régime strict ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8">
+                            <p class="text-gray-600 leading-relaxed">Non. Slimarax® est conçu pour s’intégrer facilement à votre routine. Une alimentation équilibrée et une bonne hygiène de vie restent recommandées pour optimiser les résultats.</p>
+                        </div>
+                    </div>
+                    <!-- Q4 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center transition-colors hover:bg-orange-50/30">
+                            <span class="font-bold text-slate-800 pr-4">Comment prendre le produit ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8">
+                            <p class="text-gray-600 leading-relaxed">Il est recommandé de prendre 2 gélules par jour avec un grand verre d’eau, de préférence le matin ou en début de journée.</p>
+                        </div>
+                    </div>
+                    <!-- Q5 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center transition-colors hover:bg-orange-50/30">
+                            <span class="font-bold text-slate-800 pr-4">Y a-t-il des effets secondaires ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8">
+                            <p class="text-gray-600 leading-relaxed">Slimarax® contient notamment de la caféine. Il est déconseillé aux femmes enceintes ou allaitantes, ainsi qu’aux personnes sensibles à la caféine ou présentant certaines conditions médicales. En cas de doute, demandez l’avis de votre professionnel de santé.</p>
+                        </div>
+                    </div>
+                    <!-- Q6 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center transition-colors hover:bg-orange-50/30">
+                            <span class="font-bold text-slate-800 pr-4">Ce produit est-il adapté à tout le monde ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8">
+                            <p class="text-gray-600 leading-relaxed">Ce complément est réservé à l’adulte. Si vous suivez un traitement médical ou avez une condition particulière, il est recommandé de consulter un professionnel de santé avant utilisation.</p>
+                        </div>
+                    </div>
+                    <!-- Q7 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center transition-colors hover:bg-orange-50/30">
+                            <span class="font-bold text-slate-800 pr-4">Est-ce un médicament ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8">
+                            <p class="text-gray-600 leading-relaxed">Non. Slimarax® est un complément alimentaire. Il ne vise pas à diagnostiquer, traiter ou guérir une maladie.</p>
+                        </div>
+                    </div>
+                    <!-- Q8 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center transition-colors hover:bg-orange-50/30">
+                            <span class="font-bold text-slate-800 pr-4">Y a-t-il une garantie ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8">
+                            <p class="text-gray-600 leading-relaxed">Oui, vous bénéficiez d’une garantie satisfait ou remboursé. Cela vous permet d’essayer le produit en toute sérénité.</p>
+                        </div>
+                    </div>
+                    <!-- Q9 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center transition-colors hover:bg-orange-50/30">
+                            <span class="font-bold text-slate-800 pr-4">La livraison est-elle discrète ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8">
+                            <p class="text-gray-600 leading-relaxed">Oui, les commandes sont expédiées dans des emballages discrets, sans mention explicite du contenu.</p>
+                        </div>
+                    </div>
+                    <!-- Q10 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center transition-colors hover:bg-orange-50/30">
+                            <span class="font-bold text-slate-800 pr-4">Puis-je utiliser Slimarax® sur le long terme ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8">
+                            <p class="text-gray-600 leading-relaxed">Slimarax® peut être utilisé dans le cadre d’une routine. Il est toutefois recommandé de respecter les doses indiquées et de faire des pauses si nécessaire.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- 🎯 BLOCO CTA FINAL -->
         <section class="py-24 bg-white">
             <div class="container mx-auto px-6 max-w-4xl text-center reveal reveal-init">
-                <h2 class="text-4xl font-extrabold text-slate-900 mb-6">
-                    Prêt à reprendre le contrôle ?
-                </h2>
-                <p class="text-xl text-gray-500 mb-12">
-                    Profitez de notre offre actuelle et commencez dès aujourd’hui.
-                </p>
-                
+                <h2 class="text-4xl font-extrabold text-slate-900 mb-6">Prêt à reprendre le contrôle ?</h2>
+                <p class="text-xl text-gray-500 mb-12">Profitez de notre offre actuelle et commencez dès aujourd’hui.</p>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center items-stretch sm:items-center">
-                    <a href="https://91h92.doctorramzes.com/l" class="btn-dtc px-12 py-5 rounded-2xl text-xl uppercase tracking-tighter">
-                        👉 Commander Maintenant
-                    </a>
-                    <a href="https://l3sb1.doctorfoxick.com/l" class="btn-tsl px-12 py-5 rounded-2xl text-xl uppercase tracking-tighter">
-                        👉 Voir Tous Les Détails
-                    </a>
+                    <a href="https://91h92.doctorramzes.com/l" class="btn-dtc px-12 py-5 rounded-2xl text-xl uppercase tracking-tighter">👉 Commander Maintenant</a>
+                    <a href="https://l3sb1.doctorfoxick.com/l" class="btn-tsl px-12 py-5 rounded-2xl text-xl uppercase tracking-tighter">👉 Voir Tous Les Détails</a>
                 </div>
-                
-                <p class="mt-8 text-sm font-bold text-orange-500 uppercase tracking-widest">
-                    🚨 Offre disponible pour une durée limitée.
-                </p>
+                <p class="mt-8 text-sm font-bold text-orange-500 uppercase tracking-widest">🚨 Offre disponible pour une durée limitée.</p>
             </div>
         </section>
     </main>
@@ -263,26 +418,37 @@
         <div class="container mx-auto px-6 text-center">
             <img src="images/imgi_1_logo.png" alt="Slimarax" class="h-8 mx-auto mb-10 opacity-30 grayscale" onerror="this.style.display='none';">
             <div class="max-w-4xl mx-auto mb-8">
-                <p class="text-[10px] text-gray-400 leading-relaxed uppercase tracking-widest">
-                    Slimarax est un complément alimentaire. Les résultats peuvent varier d'une personne à l'autre selon le métabolisme individuel. Ne remplace pas une alimentation variée.
-                </p>
+                <p class="text-[10px] text-gray-400 leading-relaxed uppercase tracking-widest">Slimarax est un complément alimentaire. Les résultats peuvent varier d'une personne à l'autre selon le métabolisme individuel. Ne remplace pas une alimentation variée.</p>
             </div>
             <div class="flex justify-center flex-wrap gap-x-8 gap-y-2 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
-                <a href="#" class="hover:text-orange-500 transition-colors">Privacité</a>
-                <a href="#" class="hover:text-orange-500 transition-colors">Conditions</a>
-                <a href="#" class="hover:text-orange-500 transition-colors">Contact</a>
+                <a href="#">Privacité</a><a href="#">Conditions</a><a href="#">Contact</a>
             </div>
             <p class="mt-10 text-[9px] text-gray-300">&copy; 2026 SLIMARAX FRANCE. TOUS DROITS RÉSERVÉS.</p>
         </div>
     </footer>
 
     <script>
-        // Inicializa ícones
-        if (typeof feather !== 'undefined') {
-            feather.replace();
-        }
+        // Initialize Icons
+        if (typeof feather !== 'undefined') { feather.replace(); }
 
-        // Sistema de revelação de conteúdo (apenas se JS carregar)
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Optional: Close others
+                // document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                if (isActive) {
+                    item.classList.remove('active');
+                } else {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Intersection Observer for scroll reveal
         document.addEventListener('DOMContentLoaded', () => {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
