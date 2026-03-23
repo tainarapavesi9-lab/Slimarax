@@ -63,15 +63,6 @@
             background: radial-gradient(circle at 80% 20%, #FFF5EB 0%, #FFFFFF 50%);
         }
 
-        .floating-icon {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
         /* Melhoria para a pré-visualização: garantimos visibilidade inicial */
         .reveal { opacity: 1; transform: translateY(0); transition: all 0.8s ease-out; }
         
@@ -99,7 +90,6 @@
     <header class="bg-white/90 backdrop-blur-md py-4 px-6 md:px-12 sticky top-0 z-50 border-b border-gray-100">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <!-- Fallback de texto caso a imagem não carregue no preview -->
                 <img src="images/imgi_1_logo.png" alt="Slimarax Logo" class="h-8 md:h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <span class="hidden font-extrabold text-xl tracking-tight">SLIMARAX<span class="text-orange-500">™</span></span>
             </div>
@@ -112,7 +102,7 @@
             </nav>
 
             <div class="lg:hidden">
-                <i data-feather="menu"></i>
+                <i data-feather="menu" class="text-gray-600"></i>
             </div>
         </div>
     </header>
@@ -175,18 +165,6 @@
                     <div class="reveal reveal-init active delay-200 order-1 lg:order-2 relative flex justify-center lg:justify-end">
                         <div class="relative w-full max-w-[440px]">
                             <img src="images/slimarax.png" alt="Slimarax Fat Burner" class="w-full h-auto drop-shadow-2xl" onerror="this.src='https://via.placeholder.com/440x600?text=Slimarax+Bottle';">
-                            
-                            <!-- Floating Benefit Icons -->
-                            <div class="absolute right-0 top-1/4 space-y-4">
-                                <div class="floating-icon bg-white p-4 rounded-3xl shadow-xl flex flex-col items-center border border-gray-50">
-                                    <i data-feather="flame" class="w-5 h-5 text-orange-500 mb-1"></i>
-                                    <span class="text-[9px] font-black text-gray-400 uppercase tracking-tighter">Brûle</span>
-                                </div>
-                                <div class="floating-icon bg-white p-4 rounded-3xl shadow-xl flex flex-col items-center border border-gray-50" style="animation-delay: 0.5s;">
-                                    <i data-feather="zap" class="w-5 h-5 text-orange-500 mb-1"></i>
-                                    <span class="text-[9px] font-black text-gray-400 uppercase tracking-tighter">Énergie</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
