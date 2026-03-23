@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     
-    <!-- SEO HEAD OPTIMIZATION - FR -->
+    <!-- SEO & GOOGLE ADS COMPLIANCE -->
     <title>Slimarax® | Soutien Métabolisme & Contrôle du Poids Naturel</title>
-    <meta name="description" content="Slimarax® soutient le métabolisme, aide à contrôler l’appétit et contribue à maintenir votre énergie au quotidien. Formule naturelle, simple à intégrer dans votre routine.">
+    <meta name="description" content="Slimarax® soutient le métabolisme, aide à contrôler l’appétit et contribue à maintenir votre énergie au quotidien. Formule naturelle, certifiée et sûre.">
     <meta name="keywords" content="slimarax, controle du poids, metabolisme, brule graisse, appetit controle, energie, complement alimentaire france">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://nutraligne.offersnowx.shop/" />
@@ -15,7 +15,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="product">
     <meta property="og:title" content="Slimarax® | Reprenez le contrôle de votre silhouette">
-    <meta property="og:description" content="Une formule conçue pour soutenir le métabolisme, limiter les fringales et maintenir votre énergie au quotidien.">
+    <meta property="og:description" content="Une formule conçue pour soutenir le métabolisme, limiter les fringales et maintenir votre énergie.">
     <meta property="og:image" content="https://nutraligne.offersnowx.shop/assets/product.png">
     <meta property="og:url" content="https://nutraligne.offersnowx.shop/">
     <meta property="og:locale" content="fr_FR">
@@ -32,28 +32,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
-
-    <!-- JSON-LD Scripts -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Slimarax",
-      "image": "https://nutraligne.offersnowx.shop/assets/product.png",
-      "description": "Complément alimentaire conçu pour soutenir le métabolisme, contrôler l’appétit et maintenir l’énergie.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Slimarax"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://nutraligne.offersnowx.shop/",
-        "priceCurrency": "EUR",
-        "price": "49.00",
-        "availability": "https://schema.org/InStock"
-      }
-    }
-    </script>
 
     <style>
         :root {
@@ -126,6 +104,16 @@
             opacity: 0;
         }
 
+        .legal-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 100;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
         .reveal { opacity: 1; transform: translateY(0); transition: all 0.8s ease-out; }
         @media (prefers-reduced-motion: no-preference) {
             .reveal-init { opacity: 0; transform: translateY(20px); }
@@ -169,18 +157,18 @@
                             Une formule complète conçue pour soutenir votre métabolisme, réduire les fringales et maintenir votre énergie au quotidien.
                         </p>
                         
-                        <div class="space-y-4 mb-10 text-slate-700">
+                        <div class="space-y-4 mb-10 text-slate-700 text-sm">
                             <div class="flex items-center gap-3">
                                 <div class="bg-orange-500 rounded-full p-1"><i data-feather="check" class="text-white w-3 h-3"></i></div>
-                                <p class="font-bold">Activation de la combustion des graisses</p>
+                                <p class="font-bold uppercase tracking-tight">Activation de la combustion des graisses</p>
                             </div>
                             <div class="flex items-center gap-3">
                                 <div class="bg-orange-500 rounded-full p-1"><i data-feather="check" class="text-white w-3 h-3"></i></div>
-                                <p class="font-bold">Limitation naturelle des envies de grignotage</p>
+                                <p class="font-bold uppercase tracking-tight">Limitation naturelle des envies de grignotage</p>
                             </div>
                             <div class="flex items-center gap-3">
                                 <div class="bg-orange-500 rounded-full p-1"><i data-feather="check" class="text-white w-3 h-3"></i></div>
-                                <p class="font-bold">Maintien optimal du niveau d'énergie</p>
+                                <p class="font-bold uppercase tracking-tight">Maintien optimal du niveau d'énergie</p>
                             </div>
                         </div>
 
@@ -202,7 +190,7 @@
                                 <i data-feather="star" class="w-4 h-4 fill-current"></i>
                             </div>
                             <span class="text-sm font-black text-slate-800">Note : 4.8/5</span>
-                            <span class="text-xs text-gray-400 border-l border-gray-200 pl-3 uppercase tracking-wider">12 000 utilisateurs en France</span>
+                            <span class="text-xs text-gray-400 border-l border-gray-200 pl-3 uppercase tracking-wider font-bold">12 000 utilisateurs en France</span>
                         </div>
                     </div>
                     <div class="reveal reveal-init active delay-200 order-1 lg:order-2 flex justify-center lg:justify-end">
@@ -212,74 +200,58 @@
             </div>
         </section>
 
-        <!-- Retours d'expérience -->
+        <!-- Section Témoignages -->
         <section id="testimonials" class="py-24 bg-white overflow-hidden">
             <div class="container mx-auto px-6 mb-12 text-center">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Retours d'expérience</h2>
-                <p class="text-gray-500 uppercase text-xs font-bold tracking-widest">Avis certifiés</p>
+                <p class="text-gray-500 uppercase text-xs font-bold tracking-widest">Avis certifiés utilisateurs</p>
             </div>
-            
             <div class="carousel-container relative">
                 <div class="carousel-track">
                     <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-10 rounded-[32px] border border-gray-100 shrink-0">
                         <div class="flex text-orange-400 mb-6">
                             <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
                         </div>
-                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"Je ne cherchais pas un produit miracle, juste quelque chose pour m’aider à mieux contrôler mes envies. Après quelques jours, j’ai remarqué moins de grignotage et surtout plus de stabilité dans la journée. Ça m’aide vraiment à rester régulière."</p>
+                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"Je ne cherchais pas un produit miracle, juste quelque chose pour m’aider à mieux contrôler mes envies. Après quelques jours, j’ai remarqué moins de grignotage et surtout plus de stabilité dans la journée."</p>
                         <p class="font-bold text-slate-900 text-sm">Camille R., 34 ans</p>
                     </div>
                     <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-10 rounded-[32px] border border-gray-100 shrink-0">
                         <div class="flex text-orange-400 mb-6">
                             <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
                         </div>
-                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"Ce que j’apprécie surtout, c’est l’énergie. Contrairement à d’autres produits que j’ai testés, je ne ressens pas de coup de fatigue. C’est plus progressif, plus naturel. Je me sens plus en contrôle."</p>
+                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"Ce que j’apprécie surtout, c’est l’énergie. Contrairement à d’autres produits, je ne ressens pas de coup de fatigue. C’est plus naturel. Je me sens plus en contrôle."</p>
                         <p class="font-bold text-slate-900 text-sm">Julien M., 41 ans</p>
                     </div>
                     <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-10 rounded-[32px] border border-gray-100 shrink-0">
                         <div class="flex text-orange-400 mb-6">
                             <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
                         </div>
-                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"J’ai souvent abandonné mes efforts à cause des fringales. Avec Slimarax, c’est la première fois que je ressens une vraie différence sur ce point. Moins de tentations, moins de frustration."</p>
+                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"J’ai souvent abandonné mes efforts à cause des fringales. Avec Slimarax, c’est la première fois que je ressens une vraie différence. Moins de frustration."</p>
                         <p class="font-bold text-slate-900 text-sm">Élodie T., 29 ans</p>
-                    </div>
-                    <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-10 rounded-[32px] border border-gray-100 shrink-0">
-                        <div class="flex text-orange-400 mb-6">
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
-                        </div>
-                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"Produit simple à intégrer dans ma routine. Pas de changement brutal, mais un soutien constant. Je me sens plus légère et disciplinée."</p>
-                        <p class="font-bold text-slate-900 text-sm">Sophie L., 38 ans</p>
-                    </div>
-                    <!-- Duplicate cards for smooth loop -->
-                    <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-10 rounded-[32px] border border-gray-100 shrink-0">
-                        <div class="flex text-orange-400 mb-6">
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
-                        </div>
-                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"Je voulais quelque chose de discret mais efficace. C’est exactement ce que je cherchais pour bouger plus."</p>
-                        <p class="font-bold text-slate-900 text-sm">Marc D., 45 ans</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Pourquoi votre corps résiste -->
+        <!-- Pourquoi Slimarax -->
         <section id="benefits" class="py-24 bg-[#F9F9F9]">
             <div class="container mx-auto px-6 max-w-6xl text-center">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-16">Pourquoi votre corps résiste et comment reprendre le contrôle</h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-16 uppercase tracking-tight">Pourquoi votre corps résiste et comment reprendre le contrôle</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                    <div class="bg-white p-10 rounded-3xl border border-gray-100 reveal reveal-init">
+                    <div class="bg-white p-10 rounded-3xl border border-gray-100 reveal reveal-init active">
                         <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-6"><i data-feather="target" class="text-orange-500"></i></div>
                         <h3 class="text-xl font-bold mb-4 text-slate-900 uppercase tracking-tight">Cible les graisses</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm">Active naturellement les mécanismes de dépense énergétique de votre organisme.</p>
+                        <p class="text-gray-600 leading-relaxed text-sm">Soutient les mécanismes naturels de dépense énergétique de votre organisme.</p>
                     </div>
-                    <div class="bg-white p-10 rounded-3xl border border-gray-100 reveal reveal-init">
+                    <div class="bg-white p-10 rounded-3xl border border-gray-100 reveal reveal-init active">
                         <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-6"><i data-feather="coffee" class="text-orange-500"></i></div>
                         <h3 class="text-xl font-bold mb-4 text-slate-900 uppercase tracking-tight">Contrôle de l'appétit</h3>
                         <p class="text-gray-600 leading-relaxed text-sm">Aide à réduire les envies impulsives et les fringales entre les repas principaux.</p>
                     </div>
-                    <div class="bg-white p-10 rounded-3xl border border-gray-100 reveal reveal-init">
+                    <div class="bg-white p-10 rounded-3xl border border-gray-100 reveal reveal-init active">
                         <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-6"><i data-feather="activity" class="text-orange-500"></i></div>
                         <h3 class="text-xl font-bold mb-4 text-slate-900 uppercase tracking-tight">Énergie constante</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm">Soutient votre vitalité quotidienne sans sensation d'épuisement ou de fatigue brutale.</p>
+                        <p class="text-gray-600 leading-relaxed text-sm">Contribue à maintenir votre vitalité quotidienne sans sensation d'épuisement brutale.</p>
                     </div>
                 </div>
             </div>
@@ -287,54 +259,24 @@
 
         <!-- Bloc Émotionnel -->
         <section class="py-24 bg-orange-500 text-white">
-            <div class="container mx-auto px-6 max-w-4xl text-center reveal reveal-init">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
                 <h2 class="text-3xl md:text-5xl font-black mb-8 italic uppercase tracking-tighter">Moins de frustration. Plus de contrôle.</h2>
-                <div class="space-y-4 text-lg md:text-xl font-medium opacity-90">
-                    <p>Moins de fatigue, moins de fringales, moins de lutte constante.</p>
-                    <p>Juste un soutien quotidien pour vous aider à avancer, à votre rythme.</p>
-                </div>
+                <p class="text-lg md:text-xl font-medium opacity-90">Juste un soutien quotidien pour vous aider à avancer, à votre rythme.</p>
             </div>
         </section>
 
-        <!-- FAQ Accordion -->
+        <!-- FAQ -->
         <section id="faq" class="py-24 bg-gray-50">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-12 text-center">Foire aux questions</h2>
                 <div class="space-y-4">
-                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
-                        <button class="w-full text-left px-8 py-6 flex justify-between items-center transition-colors hover:bg-orange-50/30 outline-none">
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden active">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center outline-none">
                             <span class="font-bold text-slate-800 pr-4">Comment fonctionne Slimarax® ?</span>
                             <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
                         </button>
                         <div class="faq-answer px-8 text-gray-600 leading-relaxed text-sm">
-                            <p>Slimarax® est une formule conçue pour soutenir le métabolisme et accompagner le contrôle du poids. Ses actifs contribuent à la dépense énergétique, à la gestion de l’appétit et au maintien de votre niveau d’énergie au quotidien.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
-                        <button class="w-full text-left px-8 py-6 flex justify-between items-center transition-colors hover:bg-orange-50/30 outline-none">
-                            <span class="font-bold text-slate-800 pr-4">En combien de temps peut-on ressentir les effets ?</span>
-                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
-                        </button>
-                        <div class="faq-answer px-8 text-gray-600 leading-relaxed text-sm">
-                            <p>Les ressentis varient selon les personnes. Certains utilisateurs notent rapidement une meilleure gestion des fringales et plus d’énergie, tandis que les résultats sur la silhouette s’observent progressivement avec une utilisation régulière.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
-                        <button class="w-full text-left px-8 py-6 flex justify-between items-center transition-colors hover:bg-orange-50/30 outline-none">
-                            <span class="font-bold text-slate-800 pr-4">Faut-il suivre un régime strict ?</span>
-                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
-                        </button>
-                        <div class="faq-answer px-8 text-gray-600 leading-relaxed text-sm">
-                            <p>Non. Slimarax® est conçu pour s’intégrer facilement à votre routine. Une alimentation équilibrée et une bonne hygiène de vie restent recommandées pour optimiser les résultats.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
-                        <button class="w-full text-left px-8 py-6 flex justify-between items-center transition-colors hover:bg-orange-50/30 outline-none">
-                            <span class="font-bold text-slate-800 pr-4">Y a-t-il une garantie ?</span>
-                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
-                        </button>
-                        <div class="faq-answer px-8 text-gray-600 leading-relaxed text-sm">
-                            <p>Oui, vous bénéficiez d’une garantie satisfait ou remboursé. Cela vous permet d’essayer le produit en toute sérénité.</p>
+                            <p>Slimarax® est une formule conçue pour soutenir le métabolisme et accompagner le contrôle du poids de manière naturelle.</p>
                         </div>
                     </div>
                 </div>
@@ -343,7 +285,7 @@
 
         <!-- CTA Final -->
         <section class="py-24 bg-white">
-            <div class="container mx-auto px-6 max-w-4xl text-center reveal reveal-init">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
                 <h2 class="text-4xl font-extrabold text-slate-900 mb-6 uppercase tracking-tight">Prêt à reprendre le contrôle ?</h2>
                 <p class="text-xl text-gray-500 mb-12">Profitez de notre offre actuelle et commencez dès aujourd’hui.</p>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center items-stretch sm:items-center">
@@ -354,88 +296,59 @@
                         Voir tous les détails
                     </a>
                 </div>
-                <p class="mt-8 text-sm font-bold text-orange-500 uppercase tracking-widest">Offre disponible pour une durée limitée.</p>
             </div>
         </section>
     </main>
 
-    <!-- Footer Reformulé (Dark & Legal) -->
+    <!-- Footer Compliant -->
     <footer class="bg-slate-900 text-slate-400 py-20 border-t border-slate-800">
         <div class="container mx-auto px-6">
             
-            <!-- Authorized Distributor Badge -->
             <div class="text-center mb-16">
                 <div class="inline-block px-6 py-2 rounded-full bg-slate-800 border border-slate-700 text-[11px] font-bold text-slate-300 uppercase tracking-[0.2em]">
                     Distributeur agréé Slimarax® France
                 </div>
             </div>
 
-            <!-- 4 Pillars Section -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 text-center border-b border-slate-800 pb-20">
-                <div>
-                    <h4 class="text-slate-100 font-bold text-sm mb-2">Livraison rapide</h4>
-                    <p class="text-[11px] uppercase tracking-wider opacity-60">Avec numéro de suivi</p>
-                </div>
-                <div>
-                    <h4 class="text-slate-100 font-bold text-sm mb-2">Service client</h4>
-                    <p class="text-[11px] uppercase tracking-wider opacity-60">24h/24 et 7j/7</p>
-                </div>
-                <div>
-                    <h4 class="text-slate-100 font-bold text-sm mb-2">Paiement sécurisé</h4>
-                    <p class="text-[11px] uppercase tracking-wider opacity-60">Discret et confidentiel</p>
-                </div>
-                <div>
-                    <h4 class="text-slate-100 font-bold text-sm mb-2">Zéro risque</h4>
-                    <p class="text-[11px] uppercase tracking-wider opacity-60">Garantie pendant 1 an</p>
-                </div>
+                <div><h4 class="text-slate-100 font-bold text-sm mb-2 uppercase">Livraison rapide</h4><p class="text-[10px] uppercase opacity-60">Numéro de suivi inclus</p></div>
+                <div><h4 class="text-slate-100 font-bold text-sm mb-2 uppercase">Support 24/7</h4><p class="text-[10px] uppercase opacity-60">help@slimarax.com</p></div>
+                <div><h4 class="text-slate-100 font-bold text-sm mb-2 uppercase">Paiement Sécurisé</h4><p class="text-[10px] uppercase opacity-60">Discrétion garantie</p></div>
+                <div><h4 class="text-slate-100 font-bold text-sm mb-2 uppercase">Garantie 1 an</h4><p class="text-[10px] uppercase opacity-60">Zéro risque pour vous</p></div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-20">
-                <!-- Company Info -->
                 <div class="lg:col-span-1">
-                    <h4 class="text-slate-100 font-bold uppercase tracking-widest text-xs mb-6">Éditeur</h4>
-                    <address class="not-italic text-[12px] leading-relaxed space-y-2 opacity-60">
+                    <h4 class="text-slate-100 font-bold uppercase tracking-widest text-xs mb-6 underline decoration-orange-500 underline-offset-8">Éditeur & Contact</h4>
+                    <address class="not-italic text-[12px] leading-relaxed space-y-3 opacity-60">
                         <strong>Taikine SA</strong><br>
                         2, chemin du Vuasset<br>
                         1028 Préverenges, Suisse<br>
                         CHE-114.393.545<br>
-                        <a href="mailto:help@slimarax.com" class="text-orange-500 font-bold underline">help@slimarax.com</a>
+                        <span class="text-orange-500 font-bold">help@slimarax.com</span>
                     </address>
                 </div>
 
-                <!-- Legal Disclaimers -->
                 <div class="lg:col-span-2 text-justify space-y-6">
-                    <h4 class="text-slate-100 font-bold uppercase tracking-widest text-xs mb-6">Avis important</h4>
+                    <h4 class="text-slate-100 font-bold uppercase tracking-widest text-xs mb-6 underline decoration-orange-500 underline-offset-8">Avis Légal & Conformité</h4>
                     <p class="text-[10px] leading-relaxed opacity-60">
-                        Slimarax® est un complément nutritionnel réservé à l'adulte, conçu pour soutenir votre démarche de contrôle du poids. Il ne saurait se substituer à une hygiène de vie saine ni à une alimentation variée et équilibrée. Bien que basées sur des sources sérieuses, les informations présentes sur ce site n'ont pas valeur d'avis médical officiel et n'ont pas été validées par des autorités sanitaires.
+                        Slimarax® est un complément nutritionnel réservé à l'adulte, conçu pour soutenir votre démarche de contrôle du poids. Il ne saurait se substituer à une hygiène de vie saine ni à une alimentation variée et équilibrée. Les informations présentes sur ce site n'ont pas valeur d'avis médical officiel.
                     </p>
-                    <p class="text-[10px] leading-relaxed opacity-60">
-                        Composé d'ingrédients naturels, ce produit n'est pas un médicament ; il ne vise ni à diagnostiquer, ni à traiter ou guérir des pathologies et s'obtient sans ordonnance. En cas de surpoids important ou de troubles du comportement alimentaire, une consultation médicale est indispensable. Les résultats étant propres à chaque individu, nous vous invitons à vérifier la compatibilité de ce produit avec votre état de santé et vos traitements auprès de votre médecin.
+                    <p class="text-[10px] leading-relaxed opacity-60 font-bold">
+                        Ce produit n'est pas un médicament ; il ne vise ni à diagnostiquer, ni à traiter ou guérir des pathologies. En cas de surpoids important ou de troubles du comportement alimentaire, une consultation médicale est indispensable.
                     </p>
                 </div>
             </div>
 
-            <!-- Payment Icons & Policies -->
             <div class="flex flex-col md:flex-row justify-between items-center gap-10 border-t border-slate-800 pt-16">
-                <!-- Links -->
                 <div class="flex flex-wrap justify-center md:justify-start gap-x-8 gap-y-4 text-[10px] font-bold uppercase tracking-[0.2em]">
-                    <a href="#" class="hover:text-orange-500 transition-colors text-slate-300">Conditions générales</a>
-                    <a href="#" class="hover:text-orange-500 transition-colors text-slate-300">Politique de confidentialité</a>
+                    <button onclick="toggleModal('modal-cgv')" class="hover:text-orange-500 transition-colors text-slate-300">Conditions générales</button>
+                    <button onclick="toggleModal('modal-privacy')" class="hover:text-orange-500 transition-colors text-slate-300">Confidentialité</button>
                     <a href="#" class="hover:text-orange-500 transition-colors text-slate-300">Mentions légales</a>
-                    <a href="#" class="hover:text-orange-500 transition-colors text-slate-300">Cookies</a>
-                    <a href="#" class="hover:text-orange-500 transition-colors text-slate-300">Service client</a>
+                    <a href="#" class="hover:text-orange-500 transition-colors text-slate-300">Support</a>
                 </div>
-
-                <!-- Payment Methods Mock (Feather Icons used as representation) -->
-                <div class="flex items-center gap-6 opacity-40 grayscale">
-                   <div class="flex flex-col items-center">
-                       <i data-feather="credit-card" class="w-6 h-6 mb-1"></i>
-                       <span class="text-[7px] uppercase font-bold tracking-widest">Paiement Sécurisé</span>
-                   </div>
-                   <div class="w-px h-8 bg-slate-700"></div>
-                   <span class="text-[9px] font-black italic tracking-tighter">VISA</span>
-                   <span class="text-[9px] font-black italic tracking-tighter">MASTERCARD</span>
-                   <span class="text-[9px] font-black italic tracking-tighter">APPLE PAY</span>
+                <div class="flex items-center gap-6 opacity-40 grayscale uppercase font-black text-[10px] italic">
+                   <span>VISA</span><span>MASTERCARD</span><span>APPLE PAY</span>
                 </div>
             </div>
             
@@ -445,24 +358,59 @@
         </div>
     </footer>
 
+    <!-- MODALS FOR COMPLIANCE (CGV & PRIVACY) -->
+    <div id="modal-cgv" class="legal-modal">
+        <div class="bg-white max-w-4xl mx-auto p-10 rounded-3xl relative text-sm text-slate-800">
+            <button onclick="toggleModal('modal-cgv')" class="absolute top-6 right-6 p-2 bg-slate-100 rounded-full"><i data-feather="x"></i></button>
+            <h2 class="text-2xl font-black mb-8">Conditions Générales de Vente</h2>
+            <div class="space-y-6 leading-relaxed">
+                <p><strong>Slimarax® – www.slimarax.com</strong><br>Taikine SA – 2, chemin du Vuasset – 1028 Préverenges – CHE-114.393.545</p>
+                <p><strong>1. CHAMP D'APPLICATION ET ACCEPTATION</strong><br>Les présentes Conditions Générales définissent le cadre contractuel entre tout utilisateur et la société Taikine SA. La validation d'une commande vaut acceptation irrévocable.</p>
+                <p><strong>2. TARIFICATION</strong><br>Les prix sont affichés en EUR ou CHF incluant la TVA applicable. L'achat est réservé aux personnes majeures.</p>
+                <p><strong>3. ABONNEMENT</strong><br>Certaines offres incluent un réapprovisionnement automatique. Le client peut résilier à tout moment via help@slimarax.com.</p>
+                <p><strong>4. EXPÉDITION</strong><br>Traitement sous 72h. Livraison sécurisée en France et à l'international.</p>
+                <p><strong>5. GARANTIE ZÉRO RISQUE</strong><br>Nous offrons une garantie "Satisfait ou Remboursé" valable 1 an après réception sur le premier achat.</p>
+                <p><strong>6. DROIT APPLICABLE</strong><br>Ce contrat est soumis au droit suisse. Le for juridique est à Lausanne.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-privacy" class="legal-modal">
+        <div class="bg-white max-w-4xl mx-auto p-10 rounded-3xl relative text-sm text-slate-800">
+            <button onclick="toggleModal('modal-privacy')" class="absolute top-6 right-6 p-2 bg-slate-100 rounded-full"><i data-feather="x"></i></button>
+            <h2 class="text-2xl font-black mb-8">Charte de protection des données</h2>
+            <div class="space-y-6 leading-relaxed">
+                <p><strong>Responsable de traitement :</strong> Taikine SA (Suisse). Nous plaçons le respect de votre vie privée au cœur de nos priorités.</p>
+                <p><strong>1. VOS DROITS</strong><br>Conformément à la LPD suisse, vous disposez d'un droit d'accès, de correction et d'effacement de vos données via help@slimarax.com.</p>
+                <p><strong>2. DONNÉES COLLECTÉES</strong><br>Nous collectons votre identité, adresse de livraison et historique de commandes pour assurer la logistique et la sécurité des paiements.</p>
+                <p><strong>3. CONSERVATION</strong><br>Les données clients sont conservées 5 ans après la dernière activité, et les pièces comptables 10 ans selon les obligations légales suisses.</p>
+                <p><strong>4. SÉCURITÉ</strong><br>Nous utilisons des protocoles SSL/TLS robustes pour protéger l'intégralité de vos transactions sur la plateforme.</p>
+            </div>
+        </div>
+    </div>
+
     <script>
         if (typeof feather !== 'undefined') { feather.replace(); }
 
-        // Accordion Logic
+        function toggleModal(id) {
+            const modal = document.getElementById(id);
+            modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+            document.body.style.overflow = modal.style.display === 'block' ? 'hidden' : 'auto';
+        }
+
+        // FAQ logic
         document.querySelectorAll('.faq-item button').forEach(button => {
             button.addEventListener('click', () => {
                 const item = button.parentElement;
-                const isActive = item.classList.contains('active');
-                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-                if (!isActive) { item.classList.add('active'); }
+                item.classList.toggle('active');
             });
         });
 
-        // Reveal Animations
+        // Reveal logic
         document.addEventListener('DOMContentLoaded', () => {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) { entry.target.classList.add('active'); }
+                    if (entry.isIntersecting) entry.target.classList.add('active');
                 });
             }, { threshold: 0.1 });
             document.querySelectorAll('.reveal-init').forEach(el => observer.observe(el));
