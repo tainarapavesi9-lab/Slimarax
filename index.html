@@ -91,6 +91,7 @@
         }
         .carousel-track:hover { animation-play-state: paused; }
 
+        /* Estilos do FAQ (Efeito Sanfona) */
         .faq-item.active .faq-answer {
             max-height: 1000px;
             padding-bottom: 24px;
@@ -200,10 +201,10 @@
             </div>
         </section>
 
-        <!-- Section Témoignages -->
+        <!-- Section Témoignages (Carrossel Automático) -->
         <section id="testimonials" class="py-24 bg-white overflow-hidden">
             <div class="container mx-auto px-6 mb-12 text-center">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Retours d'expérience</h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 uppercase tracking-tight">Retours d'expérience</h2>
                 <p class="text-gray-500 uppercase text-xs font-bold tracking-widest">Avis certifiés utilisateurs</p>
             </div>
             <div class="carousel-container relative">
@@ -212,22 +213,30 @@
                         <div class="flex text-orange-400 mb-6">
                             <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
                         </div>
-                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"Je ne cherchais pas un produit miracle, juste quelque chose pour m’aider à mieux contrôler mes envies. Après quelques jours, j’ai remarqué moins de grignotage et surtout plus de stabilité dans la journée."</p>
+                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"Je ne cherchais pas un produit miracle, juste quelque chose pour m’aider à mieux contrôler mes envies. Après quelques jours, j’ai remarqué moins de grignotage."</p>
                         <p class="font-bold text-slate-900 text-sm">Camille R., 34 ans</p>
                     </div>
                     <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-10 rounded-[32px] border border-gray-100 shrink-0">
                         <div class="flex text-orange-400 mb-6">
                             <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
                         </div>
-                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"Ce que j’apprécie surtout, c’est l’énergie. Contrairement à d’autres produits, je ne ressens pas de coup de fatigue. C’est plus naturel. Je me sens plus en contrôle."</p>
+                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"Ce que j’apprécie surtout, c’est l’énergie. Contrairement à d’autres produits, je ne ressens pas de coup de fatigue."</p>
                         <p class="font-bold text-slate-900 text-sm">Julien M., 41 ans</p>
                     </div>
                     <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-10 rounded-[32px] border border-gray-100 shrink-0">
                         <div class="flex text-orange-400 mb-6">
                             <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
                         </div>
-                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"J’ai souvent abandonné mes efforts à cause des fringales. Avec Slimarax, c’est la première fois que je ressens une vraie différence. Moins de frustration."</p>
+                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"J’ai souvent abandonné mes efforts à cause des fringales. Avec Slimarax, c’est la première fois que je ressens une vraie différence."</p>
                         <p class="font-bold text-slate-900 text-sm">Élodie T., 29 ans</p>
+                    </div>
+                    <!-- Duplicação para Loop Infinito -->
+                    <div class="w-[350px] md:w-[450px] mx-4 bg-gray-50 p-10 rounded-[32px] border border-gray-100 shrink-0">
+                        <div class="flex text-orange-400 mb-6">
+                            <i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic leading-relaxed text-sm">"Produit simple à intégrer dans ma routine. Je me sens plus légère et surtout plus disciplinée."</p>
+                        <p class="font-bold text-slate-900 text-sm">Sophie L., 38 ans</p>
                     </div>
                 </div>
             </div>
@@ -261,22 +270,93 @@
         <section class="py-24 bg-orange-500 text-white">
             <div class="container mx-auto px-6 max-w-4xl text-center">
                 <h2 class="text-3xl md:text-5xl font-black mb-8 italic uppercase tracking-tighter">Moins de frustration. Plus de contrôle.</h2>
-                <p class="text-lg md:text-xl font-medium opacity-90">Juste un soutien quotidien pour vous aider à avancer, à votre rythme.</p>
+                <p class="text-lg md:text-xl font-medium opacity-90 leading-relaxed">Juste un soutien quotidien pour vous aider à avancer, à votre rythme.</p>
             </div>
         </section>
 
-        <!-- FAQ -->
+        <!-- FAQ (Efeito Sanfona Completo) -->
         <section id="faq" class="py-24 bg-gray-50">
             <div class="container mx-auto px-6 max-w-4xl">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-12 text-center">Foire aux questions</h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-12 text-center uppercase tracking-tight">Foire aux questions</h2>
                 <div class="space-y-4">
+                    <!-- Q1 -->
                     <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden active">
                         <button class="w-full text-left px-8 py-6 flex justify-between items-center outline-none">
                             <span class="font-bold text-slate-800 pr-4">Comment fonctionne Slimarax® ?</span>
                             <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
                         </button>
                         <div class="faq-answer px-8 text-gray-600 leading-relaxed text-sm">
-                            <p>Slimarax® est une formule conçue pour soutenir le métabolisme et accompagner le contrôle du poids de manière naturelle.</p>
+                            <p>Slimarax® est une formule conçue pour soutenir le métabolisme et accompagner le contrôle du poids. Ses actifs contribuent à la dépense énergétique, à la gestion de l’appétit et au maintien de votre niveau d’énergie au quotidien.</p>
+                        </div>
+                    </div>
+                    <!-- Q2 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center outline-none">
+                            <span class="font-bold text-slate-800 pr-4">En combien de temps peut-on ressentir les effets ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8 text-gray-600 leading-relaxed text-sm">
+                            <p>Les ressentis varient selon les personnes. Certains utilisateurs notent rapidement une meilleure gestion des fringales et plus d’énergie, tandis que les résultats sur la silhouette s’observent progressivement avec une utilisation régulière.</p>
+                        </div>
+                    </div>
+                    <!-- Q3 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center outline-none">
+                            <span class="font-bold text-slate-800 pr-4">Faut-il suivre un régime strict ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8 text-gray-600 leading-relaxed text-sm">
+                            <p>Non. Slimarax® est conçu pour s’intégrer facilement à votre routine. Une alimentation équilibrée et une bonne hygiène de vie restent recommandées pour optimiser les résultats.</p>
+                        </div>
+                    </div>
+                    <!-- Q4 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center outline-none">
+                            <span class="font-bold text-slate-800 pr-4">Comment prendre le produit ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8 text-gray-600 leading-relaxed text-sm">
+                            <p>Il est recommandé de prendre 2 gélules par jour avec un grand verre d’eau, de préférence le matin ou en début de journée.</p>
+                        </div>
+                    </div>
+                    <!-- Q5 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center outline-none">
+                            <span class="font-bold text-slate-800 pr-4">Y a-t-il des effets secondaires ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8 text-gray-600 leading-relaxed text-sm">
+                            <p>Slimarax® contient notamment de la caféine. Il est déconseillé aux femmes enceintes ou allaitantes, ainsi qu’aux personnes sensibles à la caféine. En cas de doute, demandez l’avis de votre médecin.</p>
+                        </div>
+                    </div>
+                    <!-- Q6 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center outline-none">
+                            <span class="font-bold text-slate-800 pr-4">Est-ce un médicament ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8 text-gray-600 leading-relaxed text-sm">
+                            <p>Non. Slimarax® est un complément alimentaire. Il ne vise pas à diagnostiquer, traiter ou guérir une maladie.</p>
+                        </div>
+                    </div>
+                    <!-- Q7 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center outline-none">
+                            <span class="font-bold text-slate-800 pr-4">Y a-t-il une garantie ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8 text-gray-600 leading-relaxed text-sm">
+                            <p>Oui, vous bénéficiez d’une garantie satisfait ou remboursé. Cela vous permet d’essayer le produit en toute sérénité.</p>
+                        </div>
+                    </div>
+                    <!-- Q8 -->
+                    <div class="faq-item bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        <button class="w-full text-left px-8 py-6 flex justify-between items-center outline-none">
+                            <span class="font-bold text-slate-800 pr-4">La livraison est-elle discrète ?</span>
+                            <i data-feather="chevron-down" class="faq-icon text-orange-500 shrink-0 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-8 text-gray-600 leading-relaxed text-sm">
+                            <p>Oui, les commandes sont expédiées dans des emballages discrets, sans mention explicite du contenu pour préserver votre vie privée.</p>
                         </div>
                     </div>
                 </div>
@@ -300,7 +380,7 @@
         </section>
     </main>
 
-    <!-- Footer Compliant -->
+    <!-- Footer Reformulado (Conforme Políticas Google Ads) -->
     <footer class="bg-slate-900 text-slate-400 py-20 border-t border-slate-800">
         <div class="container mx-auto px-6">
             
@@ -311,10 +391,10 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 text-center border-b border-slate-800 pb-20">
-                <div><h4 class="text-slate-100 font-bold text-sm mb-2 uppercase">Livraison rapide</h4><p class="text-[10px] uppercase opacity-60">Numéro de suivi inclus</p></div>
-                <div><h4 class="text-slate-100 font-bold text-sm mb-2 uppercase">Support 24/7</h4><p class="text-[10px] uppercase opacity-60">help@slimarax.com</p></div>
-                <div><h4 class="text-slate-100 font-bold text-sm mb-2 uppercase">Paiement Sécurisé</h4><p class="text-[10px] uppercase opacity-60">Discrétion garantie</p></div>
-                <div><h4 class="text-slate-100 font-bold text-sm mb-2 uppercase">Garantie 1 an</h4><p class="text-[10px] uppercase opacity-60">Zéro risque pour vous</p></div>
+                <div><h4 class="text-slate-100 font-bold text-sm mb-2 uppercase tracking-tighter">Livraison rapide</h4><p class="text-[10px] uppercase opacity-60">Suivi inclus</p></div>
+                <div><h4 class="text-slate-100 font-bold text-sm mb-2 uppercase tracking-tighter">Support 24/7</h4><p class="text-[10px] uppercase opacity-60">help@slimarax.com</p></div>
+                <div><h4 class="text-slate-100 font-bold text-sm mb-2 uppercase tracking-tighter">Sécurité SSL</h4><p class="text-[10px] uppercase opacity-60">Discrétion totale</p></div>
+                <div><h4 class="text-slate-100 font-bold text-sm mb-2 uppercase tracking-tighter">Garantie 1 an</h4><p class="text-[10px] uppercase opacity-60">Zéro risque</p></div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-20">
@@ -332,10 +412,10 @@
                 <div class="lg:col-span-2 text-justify space-y-6">
                     <h4 class="text-slate-100 font-bold uppercase tracking-widest text-xs mb-6 underline decoration-orange-500 underline-offset-8">Avis Légal & Conformité</h4>
                     <p class="text-[10px] leading-relaxed opacity-60">
-                        Slimarax® est un complément nutritionnel réservé à l'adulte, conçu pour soutenir votre démarche de contrôle du poids. Il ne saurait se substituer à une hygiène de vie saine ni à une alimentation variée et équilibrée. Les informations présentes sur ce site n'ont pas valeur d'avis médical officiel.
+                        Slimarax® est un complément nutritionnel réservé à l'adulte, conçu pour soutenir votre démarche de contrôle du poids. Il ne saurait se substituer à une hygiène de vie saine ni à une alimentation variée et équilibrée.
                     </p>
                     <p class="text-[10px] leading-relaxed opacity-60 font-bold">
-                        Ce produit n'est pas un médicament ; il ne vise ni à diagnostiquer, ni à traiter ou guérir des pathologies. En cas de surpoids important ou de troubles du comportement alimentaire, une consultation médicale est indispensable.
+                        Ce produit n'est pas un médicament ; il ne vise ni à diagnostiquer, ni à traiter ou guérir des pathologies. En cas de surpoids important ou de troubles particuliers, une consultation médicale est indispensable.
                     </p>
                 </div>
             </div>
@@ -358,19 +438,17 @@
         </div>
     </footer>
 
-    <!-- MODALS FOR COMPLIANCE (CGV & PRIVACY) -->
+    <!-- MODALS FOR COMPLIANCE -->
     <div id="modal-cgv" class="legal-modal">
         <div class="bg-white max-w-4xl mx-auto p-10 rounded-3xl relative text-sm text-slate-800">
             <button onclick="toggleModal('modal-cgv')" class="absolute top-6 right-6 p-2 bg-slate-100 rounded-full"><i data-feather="x"></i></button>
-            <h2 class="text-2xl font-black mb-8">Conditions Générales de Vente</h2>
+            <h2 class="text-2xl font-black mb-8 uppercase">Conditions Générales de Vente</h2>
             <div class="space-y-6 leading-relaxed">
                 <p><strong>Slimarax® – www.slimarax.com</strong><br>Taikine SA – 2, chemin du Vuasset – 1028 Préverenges – CHE-114.393.545</p>
-                <p><strong>1. CHAMP D'APPLICATION ET ACCEPTATION</strong><br>Les présentes Conditions Générales définissent le cadre contractuel entre tout utilisateur et la société Taikine SA. La validation d'une commande vaut acceptation irrévocable.</p>
-                <p><strong>2. TARIFICATION</strong><br>Les prix sont affichés en EUR ou CHF incluant la TVA applicable. L'achat est réservé aux personnes majeures.</p>
-                <p><strong>3. ABONNEMENT</strong><br>Certaines offres incluent un réapprovisionnement automatique. Le client peut résilier à tout moment via help@slimarax.com.</p>
-                <p><strong>4. EXPÉDITION</strong><br>Traitement sous 72h. Livraison sécurisée en France et à l'international.</p>
-                <p><strong>5. GARANTIE ZÉRO RISQUE</strong><br>Nous offrons une garantie "Satisfait ou Remboursé" valable 1 an après réception sur le premier achat.</p>
-                <p><strong>6. DROIT APPLICABLE</strong><br>Ce contrat est soumis au droit suisse. Le for juridique est à Lausanne.</p>
+                <p><strong>1. CHAMP D'APPLICATION ET ACCEPTATION</strong><br>Les présentes Conditions Générales définissent le cadre contractuel entre tout utilisateur et la société Taikine SA.</p>
+                <p><strong>2. TARIFICATION</strong><br>Les prix sont affichés en EUR incluant la TVA applicable. L'achat est réservé aux personnes majeures.</p>
+                <p><strong>3. ABONNEMENT</strong><br>Certaines offres peuvent inclure un service de réapprovisionnement automatique résiliable à tout moment.</p>
+                <p><strong>4. GARANTIE ZÉRO RISQUE</strong><br>Nous offrons une garantie "Satisfait ou Remboursé" valable 1 an après réception sur le premier achat.</p>
             </div>
         </div>
     </div>
@@ -378,35 +456,45 @@
     <div id="modal-privacy" class="legal-modal">
         <div class="bg-white max-w-4xl mx-auto p-10 rounded-3xl relative text-sm text-slate-800">
             <button onclick="toggleModal('modal-privacy')" class="absolute top-6 right-6 p-2 bg-slate-100 rounded-full"><i data-feather="x"></i></button>
-            <h2 class="text-2xl font-black mb-8">Charte de protection des données</h2>
+            <h2 class="text-2xl font-black mb-8 uppercase">Charte de protection des données</h2>
             <div class="space-y-6 leading-relaxed">
-                <p><strong>Responsable de traitement :</strong> Taikine SA (Suisse). Nous plaçons le respect de votre vie privée au cœur de nos priorités.</p>
+                <p><strong>Responsable de traitement :</strong> Taikine SA (Suisse).</p>
                 <p><strong>1. VOS DROITS</strong><br>Conformément à la LPD suisse, vous disposez d'un droit d'accès, de correction et d'effacement de vos données via help@slimarax.com.</p>
-                <p><strong>2. DONNÉES COLLECTÉES</strong><br>Nous collectons votre identité, adresse de livraison et historique de commandes pour assurer la logistique et la sécurité des paiements.</p>
-                <p><strong>3. CONSERVATION</strong><br>Les données clients sont conservées 5 ans après la dernière activité, et les pièces comptables 10 ans selon les obligations légales suisses.</p>
-                <p><strong>4. SÉCURITÉ</strong><br>Nous utilisons des protocoles SSL/TLS robustes pour protéger l'intégralité de vos transactions sur la plateforme.</p>
+                <p><strong>2. DONNÉES COLLECTÉES</strong><br>Nous collectons votre identité et adresse de livraison pour assurer la logistique des commandes.</p>
+                <p><strong>3. CONSERVATION</strong><br>Les données sont conservées selon les obligations légales suisses (jusqu'à 10 ans pour la comptabilité).</p>
             </div>
         </div>
     </div>
 
     <script>
+        // Inicializar ícones
         if (typeof feather !== 'undefined') { feather.replace(); }
 
+        // Lógica do Modal
         function toggleModal(id) {
             const modal = document.getElementById(id);
             modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
             document.body.style.overflow = modal.style.display === 'block' ? 'hidden' : 'auto';
         }
 
-        // FAQ logic
+        // Lógica do FAQ (Efeito Sanfona)
         document.querySelectorAll('.faq-item button').forEach(button => {
             button.addEventListener('click', () => {
                 const item = button.parentElement;
-                item.classList.toggle('active');
+                const isActive = item.classList.contains('active');
+                
+                // Fecha outros se necessário (opcional)
+                // document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                if (!isActive) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
             });
         });
 
-        // Reveal logic
+        // Revelação de conteúdo ao scroll
         document.addEventListener('DOMContentLoaded', () => {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
